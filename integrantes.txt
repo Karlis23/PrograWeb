@@ -1,4 +1,8 @@
 Karla Alvarez Ortiz 10030545
 Angeles Salazar Martha Olivia 09031172
 Marisol Lucio Martinez 10031057
+<<<<<<< HEAD
 Sandra Garcia Aguilar 10030134
+=======
+Jose Martin Garcia Sanchez 10031004
+>>>>>>> f7f4c78116725ac4cf5b44ecf390b8838a15711b
