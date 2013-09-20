@@ -4,6 +4,7 @@ input,
 select,
 textarea{
   color:black;
+
   }
   
 body{
@@ -28,7 +29,7 @@ body{
   /*color de sitio web*/
 
 .header-container{
-  border-bottom: 20px solid pink;
+  border-bottom: 20px solid blue;
 }  
 
 .footer-container,
@@ -101,15 +102,21 @@ nav li { /*quitala viñeta*/
    
 @media only screen and (min-width: 480px){
 /*aplicar a pantallas más anchas de 480px cambia d color el texto de h1*/
+   .title{
+	 font-family: ' Spirax ', cursiva ;
+	}
+
   h1{
-    color: red;
+    color: red;		
   }
+  
   nav a{
 	float:left;
 	width:27%;
 	margin:0 1.7%;
 	padding:25px 2%;
 	margin-bottom:0;
+	
   }
   
   nav li:first-child a{
@@ -125,36 +132,46 @@ nav li { /*quitala viñeta*/
 }/*fin 480px*/
 
 @media only screen and (min-width: 780px){
+	
 	header-container,
+	.title{
+	  font-family: ' Poiret Uno ', cursiva ;
+	}
 	.main aside{ /*efecto de css3 en capas */
-		-webkit-box-shadow: 5 10px 5px #blue;
-		   -moz-box-shadow: 5 10px 5px #blue;
-		        box-shadow: 5 10px 5px #blue;
+		frontera: oculto 0px # 0e5169 ;
+		-Moz-border-radius-topleft: 75px ;
+		-Moz-border-radius-topright: 0px ;
+		-Moz-border-radius-bottomleft: 0px ;
+		-Moz-border-radius-bottomright: 75px ;
+		-Webkit-border-top-left-radius: 75px ;
+		-Webkit-border-top-derecha-radius: 0px ;
+		-Webkit-border-bottom-left-radius: 0px ;
+		-Webkit-border-bottom-derecha-radius: 75px ;
+		border-top-left-radius: 75px ;
+		border-top-derecha-radius: 0px ;
+		border-bottom-left-radius: 0px ;
+		border-bottom-derecha-radius: 75px ;
+	
+			
 	}
 	.title{
-		float:left;
+	    
+		float:right;
+		
+
 	}
 	nav{
-		float:right;
+		float:left;
 		width:38%;
+		
+			
 	}
 	.main article{
-		float:left;
+		float:right;
 		width:57%;
 	}
 	.main aside {
-		float:right;
+		float:left;
 		width:28%;	
+	 }
 	}
-}
-
-
-
-
-
-  
-
-
-
-
-  
