@@ -1,0 +1,92 @@
+.color1{background-color:green;}
+.color2{background-color:black;´}
+.color3{background-color:white;}
+.color4{background-color:black;}
+  
+ 
+ .container {
+width:90%;
+margin:0 5%;
+}
+
+/*menu*/
+
+nav ul{
+   margin: 0;
+   padding: 0;
+   
+}
+
+
+
+
+nav a{
+  display:block; /*display oculta elemento*/
+  margin-bottom: 10px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: black;
+  
+  }
+  
+nav a:hover,
+van a:visited{
+    color: green;
+}
+
+nav a:hover {
+    text-decoration:underline;
+}
+
+nav li { /*quitala viñeta*/
+   list-style: none;
+
+}
+
+
+
+.clearfix:before,
+.clearfix:after{
+   content: "";
+   display: table;
+} 
+
+.clearfix:after{
+   clear: both;
+}
+
+
+
+   
+@media only screen and (min-width: 480px){
+/*aplicar a pantallas más anchas de 480px cambia d color el texto de h1*/
+  nav a{
+	float:left;
+	width:27%;
+	margin:0 1.7%;
+	padding:25px 2%;
+	margin-bottom:0;
+  }
+  
+  nav li:first-child a{
+margin-left:0;
+  }
+  
+  nav li:last-child a{
+	margin-right:0;
+  }
+  nav ul li{
+	display:inline;
+  }
+}/*fin 480px*/
+
+	
+	nav{
+		float:center;
+	
+	}
+
+

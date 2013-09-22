@@ -1,0 +1,197 @@
+
+html,
+button,
+input,
+select,
+textarea
+ {
+color:red;
+}
+
+
+body {
+		<!--1em porcentaje de aumento o reduccion-->
+	font-size:1em; 
+	line-height:1.4;
+	font:16px arial ;
+		<!--Siempre va a respetar la ultima modificacion que se haga, por eso es hoja en cascada-->
+		
+
+}
+	<!--Selecciona todos los elementos de la clase container->
+.container{
+	width:90%;
+	margin:0-5%;
+	}
+
+	
+margin:3px 6px;
+margin:3px 6px 3px 6px; <!--Manecillas del reloj-->
+margin:3px; 
+
+<!--Estas lineas son lo mismo que estas de abajo-->
+margin-left:6px;
+margin-right:6px;
+margin-top:3px;
+margin-button:3px;
+}
+
+
+
+
+.border-container{
+border-bottom: 20px solid #e44d26;
+}
+
+.footer-container,
+.main aside{
+border-top: 20px solid #e44d26;
+}
+
+nav ul {
+
+margin: 0;
+padding:0;
+
+}
+
+nav a{
+display:block; 
+margin-bottom:10px;
+padding: 15px;
+text-align: center;
+text-decoration:none;
+font-weight:bold;
+color:white;
+background: #e44d26;
+
+}
+
+nav a:hover,
+van a:visited{
+color:white;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+nav li{
+list-style:none;
+}
+
+.main article h1{
+font-size: 2em;
+}
+
+
+
+
+.main aside{
+	color:white;
+	padding:opx 5% 0px;
+}
+
+
+.footer-container, footer{
+color:white;
+padding:20px 0;
+}
+
+
+
+.clearfix:before,
+.clearfix:after{
+content:" ";
+display: table;
+}
+
+.clearfix:after{
+clear:both;
+}
+
+
+
+
+@media only screen and  (min-width: 480px){
+/*aplica a pantallas mas anchas de 480 px */
+
+
+
+h1{
+	color:black;
+}
+nav a {
+	float:left;
+	width:27%;
+	margin:0 1.7%;
+	padding:25px2%;
+	margin-bottom:0;
+}
+
+nav li: first-child a{
+	margin-left:0;
+}
+
+nav li:last-child a{
+	margin-right:0;
+}
+
+nav ul li{
+	display:inline;
+}}
+
+@media only screen and  (min-width: 780px){ 
+
+	header-container,
+	.main aside
+	{
+		
+	
+	-webkit-box-shadow:0 5 px #aaa;/*safari chrome*/
+		-moz-box-shadow:0 5px 10px #aaa;/*mozila*/
+			box-shadow:0 5px 10px #aaa; /*propiedad para cuando sea aceptado el estandar*/
+			
+				background:-webkit-gradient(radial, 165 0, 0, 220 -257, 465, from(#00FF83), to(#00425A));
+			
+		
+			
+	}
+	
+	
+	.title{
+		float:left;
+			
+			
+	}
+	
+	
+	nav {
+		float:left;
+		widht:38%;
+		
+			}
+			
+			
+	.main article{
+		float:left;
+		width:57%;
+		
+		
+	}	
+
+	.main aside {
+		float:left;
+		width:28%;
+		
+
+}	
+	
+	}	
+	
+	
+
+
+
+
+
