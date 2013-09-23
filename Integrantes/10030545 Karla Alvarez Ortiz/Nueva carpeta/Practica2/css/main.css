@@ -3,13 +3,13 @@ button,
 input,
 select,
 textarea{
-	color: blue;
+	color: pink;
 }
 
 body{
 	font-size:1em;
 	line-height:1.4;
-	font: 16px Helvetica;
+	font: 16px Arial;
 	}
 	
 .conainer{
@@ -31,19 +31,22 @@ body{
 
 .header-container
 {
-	border-bottom: 20px solid #e44d26;
+	border-bottom: 20px solid #6b2360;
 }
 
 .footer-container,
 .main aside
 {
-border-top: 20px solid #e44d26
+border-top: 20px solid #6b2360 
 	
 }
 
 .title
 {
-	color:white;
+	color:blue;
+	font-family: 'Mystery Quest', cursive;
+	
+	
 	
 }
 
@@ -64,7 +67,7 @@ nav a{
 	text-decoration: none;
 	font-weight: bold;
 	color: white;
-	background: #e44d26;
+	background: #6b2360;
 	}
 	
 	nav a:hover,
@@ -109,11 +112,18 @@ nav a{
 			clear:both;
 		}
 	
-	@media only screen and (min-width: 480px)
+	@media only screen and (min-width: 480px){
 	/*aplica a pantallas mas anchas de 480 px */
+	
+	.title
 	{
+	 font-family: 'Bubbler One', sans-serif;		
+	}
+	
 		h1{
-		color: red;
+		
+		color: #4aeb3b;
+		font-family: 'Bubbler One', sans-serif;
 		}
 		
 	nav a
@@ -136,37 +146,41 @@ nav a{
 	nav ul li{
 			display: inline;
 	}
+	
+	
+	}
+	
 		
-	}	
+		
 		
 	@media only screen and (min-width: 780px){
 	/*aplica a pantallas mas anchas de 480 px */
 		header-container,
-		.main aside{
-			-webkit-box-shadow: 0 5px 10px #aaa;
-				-moz-box-shadow: 0 5px 10px #aaa;
-					 box-shadow: 0 5px 10px #aaa;
-					 
-					 
-					 
+		.main aside{					
+			
+				-Moz-box-shadow: 5px 10px 60px #da7fe8 ;
+					-Webkit-box-shadow: 5px 10px 60px #da7fe8 ;
+						box-shadow: 5px 10px 60px #da7fe8 ;
 		}
 		.title
 			{
-				float:left;
+				float:right;
+				font-family: 'Finger Paint', cursive;
 			}
 		nav
 			{
-				float:right;
+				float:left;
 				width:38%;
 			}	
 		.main article  
 			{
-				float: left;
+				float: right;
 				width: 57%;
+				font-family: 'Finger Paint', cursive;
 			}
 		.main aside
 			{
-				float:right;
+				float:left;
 				width:28%;
 			}
 	
