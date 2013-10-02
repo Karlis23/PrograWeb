@@ -1,0 +1,187 @@
+html,
+button,
+input,
+select,
+textarea{
+	color: pink;
+}
+
+body{
+	font-size:1em;
+	line-height:1.4;
+	font: 16px Arial;
+	}
+	
+.conainer{
+	width: 90%;
+	
+	/*formas de mostrar los margenes*/
+	
+	margin:3px 6%; /*izq-der*/
+	
+	/*margin: 3px 6px 3px 6px; /*arriba,derecha,abajo, izq*/
+	
+	/*margin:3px;  /*todos se definen con el mismo tamaño*/
+	
+	/**margin-left:3px; margin-right: 4px; margin-top:4px; margin-bottom: 3px;**/
+
+}
+
+/*Color al sitio web */
+
+.header-container
+{
+	border-bottom: 20px solid #6b2360;
+}
+
+.footer-container,
+.main aside
+{
+border-top: 20px solid #6b2360 
+	
+}
+
+.title
+{
+	color:blue;
+	font-family: 'Mystery Quest', cursive;
+	
+	
+	
+}
+
+/*Menu*/
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	 }
+	 
+	 
+	 /*Ocultar con none y hacer visible con block*/
+nav a{
+	display: block;
+	margin-bottom: 10px;
+	padding: 15 px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	background: #6b2360;
+	}
+	
+	nav a:hover,
+	van a:visited{
+		 color:blue;
+		 } 
+		 
+	nav a:hover{
+		 text-decoration:underline;
+		 } 
+		 
+	nav li 
+		{
+		list-style: none;
+	}
+	
+	.main {
+			padding: 30px 0;
+  		  }
+	.main article h1 
+				{
+				font-size: 2em;}
+				
+	.main aside {
+				color: white;
+				padding: 0px 5% 10px;
+	}
+	
+	.footer-container footer {
+							color: white;
+							padding:20px 0;
+	}
+	
+	.clearfix:before,
+	.clearfix:after{
+		content: " ";
+		display: table;
+	}
+	
+	.clearfix:after
+		{
+			clear:both;
+		}
+	
+	@media only screen and (min-width: 480px){
+	/*aplica a pantallas mas anchas de 480 px */
+	
+	.title
+	{
+	 font-family: 'Bubbler One', sans-serif;		
+	}
+	
+		h1{
+		
+		color: #4aeb3b;
+		font-family: 'Bubbler One', sans-serif;
+		}
+		
+	nav a
+		{
+		float: left;
+		width:27%;
+		margin: 0 1.7%;
+		padding: 25px 2%;
+		margin-bottom: 0;
+		}
+	
+	nav li:first-child a{
+				margin-left:0;
+				}	
+	
+	nav li:first-child a{
+				margin-right:0;
+				}		
+	
+	nav ul li{
+			display: inline;
+	}
+	
+	
+	}
+	
+		
+		
+		
+	@media only screen and (min-width: 780px){
+	/*aplica a pantallas mas anchas de 480 px */
+		header-container,
+		.main aside{					
+			
+				-Moz-box-shadow: 5px 10px 60px #da7fe8 ;
+					-Webkit-box-shadow: 5px 10px 60px #da7fe8 ;
+						box-shadow: 5px 10px 60px #da7fe8 ;
+		}
+		.title
+			{
+				float:right;
+				font-family: 'Finger Paint', cursive;
+			}
+		nav
+			{
+				float:left;
+				width:38%;
+			}	
+		.main article  
+			{
+				float: right;
+				width: 57%;
+				font-family: 'Finger Paint', cursive;
+			}
+		.main aside
+			{
+				float:left;
+				width:28%;
+			}
+	
+	}

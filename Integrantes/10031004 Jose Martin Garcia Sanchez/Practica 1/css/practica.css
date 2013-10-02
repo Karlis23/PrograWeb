@@ -1,0 +1,182 @@
+﻿html ,
+button,
+input,
+select,
+textarea{
+  color:black;
+  }
+  
+body{
+    font-size:1em;
+line-height:1.4;
+font:15px arial;
+  }
+  
+ .container {
+width:90%;
+margin:0 5%;
+}
+
+/*margin:0px 5px 0px 5px;
+margin:3px;
+margin-left:3px;
+margin-right:4px;
+margin-top:4px;
+margin-bottom:3px; */
+  
+  
+  /*color de sitio web*/
+
+.header-container{
+  border-bottom: 20px solid  green;
+}
+
+.footer-container,
+.main aside{
+border-top: 20px solid  	green ;
+}
+
+.title{
+  color:black;
+}
+
+/*menu*/
+
+nav ul{
+   margin: 0;
+   padding: 0;
+   
+}
+
+nav a{
+  display:block; /*display oculta elemento*/
+  margin-bottom: 10px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: black;
+  
+  }
+  
+nav a:hover,
+van a:visited{
+    color:black;
+}
+
+nav a:hover {
+    text-decoration:underline;
+}
+
+nav li { /*quitala viñeta*/
+   list-style: none;
+
+}
+.main {
+   padding:30px 0;
+}
+.main article h1 {
+  font-size:2em;
+}
+
+.main aside{
+     color:  	 	brown ;
+padding: 0px 5% 10px;
+}
+.footer-container footer{
+    color:red;
+padding: 20px 0;
+}
+
+.clearfix:before,
+.clearfix:after{
+   content: "";
+   display: table;
+} 
+
+.clearfix:after{
+   clear: both;
+}
+
+
+
+   
+@media only screen and (min-width: 480px){
+/*aplicar a pantallas más anchas de 480px cambia d color el texto de h1*/
+  h1{
+    color: blue ;
+  }
+  nav a{
+	float:left;
+	width:27%;
+	margin:0 1.7%;
+	padding:25px 2%;
+	margin-bottom:0;
+  }
+  
+  nav li:first-child a{
+margin-left:0;
+  }
+  
+  nav li:last-child a{
+	margin-right:0;
+  }
+  nav ul li{
+	display:inline;
+  }
+}/*fin 480px*/
+
+@media only screen and (min-width: 780px){
+.title{
+font-family: 'times new roman', cursive;
+}
+
+
+	.title{
+		font-family: 'arial black', cursive
+	}
+	.nav {
+ 
+   font-family: 'Calibri ', cursive;
+	}
+	
+	nav{
+		float:right;
+		width:38%;
+	}
+	.main article{
+		float:right;
+		width:57%;
+		
+		
+border:dashed 5px #000000;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+
+
+
+	}
+	.main aside{
+		float:left;
+		width:10%;
+		
+
+   -moz-box-shadow: 16px 19px 7px #4ead51;
+-webkit-box-shadow: 16px 19px 7px #4ead51;
+box-shadow: 16px 19px 7px #4ead51;
+
+
+
+
+	}
+}
+
+
+
+
+
+
+
+

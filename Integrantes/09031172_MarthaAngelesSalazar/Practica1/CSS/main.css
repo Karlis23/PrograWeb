@@ -69,7 +69,7 @@ nav a:hover {
     text-decoration:underline;
 }
 
-nav li { /*quitala viñeta*/
+nav li { /*quita la viñeta*/
    list-style: none;
 
 }
@@ -93,7 +93,11 @@ nav li { /*quitala viñeta*/
 .clearfix:after{
    content: "";
    display: table;
-   } /*acomoda en capas*/
+} /*acomoda en capas*/
+
+.clearfix:after{
+	clear:both;
+}   
    
 @media only screen and (min-width: 480px){
 /*aplicar a pantallas más anchas de 480px cambia d color el texto de h1*/
@@ -126,6 +130,21 @@ nav li { /*quitala viñeta*/
 		-webkit-box-shadow: 5 10px 5px #blue;
 		   -moz-box-shadow: 5 10px 5px #blue;
 		        box-shadow: 5 10px 5px #blue;
+	}
+	.title{
+		float:left;
+	}
+	nav{
+		float:right;
+		width:38%;
+	}
+	.main article{
+		float:left;
+		width:57%;
+	}
+	.main aside {
+		float:right;
+		width:28%;	
 	}
 }
 
