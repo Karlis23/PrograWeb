@@ -1,0 +1,47 @@
+
+body {background-color:#FEE601;
+
+margin-left:auto;
+	margin-right:auto;
+	width:500px;
+	padding:0px;
+       	margin:190px 180px  180px 190px;
+	
+}
+
+html ,
+button,
+input,
+select,
+textarea{
+  color:black;
+  }
+  
+
+
+
+/*menu*/
+
+
+
+a:link { 
+   
+  text-decoration: none;
+   
+  }
+  
+
+                          
+  
+a:visited{
+    color:  	#FF1CAE ;
+}
+
+
+
+
+
+
+
+
+
