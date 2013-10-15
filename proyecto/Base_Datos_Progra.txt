@@ -1,0 +1,148 @@
+create database Tienda_Libros
+
+use Tienda_Libros
+
+create table genero (
+id_genero  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+descripcion varchar(20)
+)
+
+create table aparador  (
+id_aparador INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+tipo_estante  varchar(8)
+--linea,prestamo,venta 
+)
+
+create table cliente(
+id_cliente  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nombre_cliente varchar(25),
+apellido_paterno varchar(25),
+apellido_materno varchar(25),
+telefono char(10),
+email varchar(30)
+)
+
+
+create table estado(
+id_estado INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+descripcion varchar(25)
+)
+
+create table municipio(
+id_municipio INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+descripcion varchar(25)
+)
+
+create table status_socio(
+id_status  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+descripcion varchar(20)
+)
+
+create table socio(
+id_socio INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_cliente int,
+id_status int, --lleno, libre
+calle_socio varchar(25),
+colonia_socio varchar(25),
+numero_socio char(3),
+id_municipio int,
+id_estado int,
+foreign key (id_municipio) references municipio (id_municipio),
+foreign key (id_estado) references estado (id_estado) ,
+foreign key (id_cliente) references cliente (id_cliente),
+foreign key (id_status) references status_socio (id_status)
+)
+
+
+ create table libro (
+ id_libro INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ nombre_libro varchar(25),
+ no_copias int,
+ id_genero int,
+ id_aparador int,
+ foreign key (id_genero) references genero (id_genero),
+ foreign key (id_aparador) references aparador (id_aparador),
+  )
+
+
+create table tipo_empleado (
+id_tipo_empleado INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+descripcion varchar(25), --admiistrador,cajero,auxiliar,
+)
+
+
+create table empleado (
+id_empleado INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nombre_empleado varchar(20),
+apellido_paterno_empleado varchar(20),
+apellido_materno_empleado varchar(20),
+edad char(2),
+calle_empleado varchar(25),
+colonia_empleado varchar(25),
+numero_empleado char(3),
+telefono char(10),
+email varchar(30),
+id_tipo_empleado int,
+foreign key (id_tipo_empleado)references tipo_empleado(id_tipo_empleado)
+)
+
+
+create table tienda (
+id_tienda  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nombre_tienda varchar(25),
+no_tienda char(3),
+calle_tienda varchar(25),
+colonia_tienda varchar(25),
+id_estado int,
+id_municipio int,
+id_empleado char(5) --Empleado que es administrador
+)
+
+
+
+create table venta_libros(
+id_venta INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+id_cliente int,
+id_empleado int,
+id_tienda int,
+fecha_venta date,
+subtotal float,
+iva float,
+total float,
+foreign key (id_tienda) references tienda(id_tienda),
+foreign key (id_empleado) references empleado(id_empleado),
+foreign key (id_cliente) references cliente (id_cliente) 
+)
+
+
+create table detalle_venta (
+id_libro int,
+id_venta int,
+cantidad int ,
+precio int,
+primary key(id_venta,id_libro),
+foreign key (id_libro) references libro (id_libro),
+foreign key (id_venta) references venta_libros (id_venta))
+
+
+
+
+
+create table prestamo(
+id_prestamo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_socio int,
+id_empleado int,
+id_tienda int,
+cantidad int,
+fecha_prestamo date,
+fecha_devolucion date,
+costo_prestamo float,
+total_prestamo float,
+foreign key (id_socio) references socio(id_socio),
+foreign key (id_empleado) references empleado (id_empleado),
+foreign key (id_tienda) references tienda(id_tienda) )
+
+
+
+
+
