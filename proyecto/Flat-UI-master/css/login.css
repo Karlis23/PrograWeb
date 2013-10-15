@@ -1,0 +1,22 @@
+  .container{
+	width:700px;
+	padding-left: 170px;
+  }
+ 
+  h1{
+    color:black;
+	text-align:center;
+	font:52px Buxton Sketch;
+	
+   }
+   
+   body{
+	background-color:#1abc9c;
+   }
+   
+   .login-form{
+   width:350px;
+   margin: 0 auto;
+   background-size:950px 800px;
+	
+   }
