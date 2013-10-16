@@ -12,7 +12,7 @@
     <!-- Loading Flat UI -->
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/docs.css" rel="stylesheet">
-    <link rel = "stylesheet"  href = "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel ="stylesheet"  href = "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <link rel="shortcut icon" href="images/favicon.ico">
 	<script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
@@ -20,9 +20,22 @@
 	<script ="jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.datepicker.js">
 	</script>
 	<script>
-			$(function () {
+	
+	     var url = document.location.href; <!--almacenar la url-->
+		 alert(url); <!--manda pantalla de alerta al navegador-->
+		 
+		 var url2 = url.split('?')[1]<!-- guarda un arreglo el 0 esta antes del signo-->
+		 //alert(url2); <!--manda pantalla de alerta al navegador-->
+		 
+		 var datos = url2.split('&') <!-- guarda un arreglo el 0 esta antes del signo-->
+		      x = datos.length;
+		 
+		  $(function () {
 	      $("#fechaNac" ).datepicker();
+		  $("select").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
+		  
 		  });
+		  
 		  
 	</script>
 
@@ -33,15 +46,23 @@
   </head>
   <body>
 		 <div class="container">
-		  <form action="datos.html" method="GET" > <!-- especifica la ruta a dond lo enviara http protolocolo sin memoria las variables no se conservan entonces se tienn q ocupar mecanismo
-															 de recuperacion de datos como get envia x la url y post por el cuerpo dela pagina -->
+		 
+		 <script>
+		 
+		  for(var i = 0; i < x ; i ++){
+		     document.write('pre'+datos[i]+'pre');
+		  }
+		 
+		 </script>
+		  <form action="" method="GET" > <!-- especifica la ruta a dond lo enviara http protolocolo sin memoria las variables no se conservan entonces se tienn q ocupar mecanismo
+															 de recuperacion de datos como get envia x la url y post por el cuerpo dela pagina, get envia atraves de la url-->
 		  
             <label for="nombre" > Nombre:</label>
 			<input type="text" id="nombre" name="nombre" class="form-control" required autofocus />
 		
 			
 			<label for="apellido" > Apellido Paterno:</label>
-			<input type="text" id="apellido" name="apellido" class="form-control" required />
+			<input type="text" id="apellido" name="apellido" class="form-control"  required/>
 			
 			<label for="ape" > Apellido Materno:</label>
 			<input type="text" id="ape" name="ape" class="form-control" required/>
@@ -51,8 +72,42 @@
 			
 			<label for="fechaNac" > Fecha:</label>
 			<input type="date" id="fechaNac" name="fechaNac" class="form-control" />
-	
 			
+			<label for="genero" > Genero:</label></br>
+			
+			<label class="radio"> Femenino
+				<input type="radio" name="genero" value="F" data-toggle="radio"/>
+			</label>
+			<label class="radio" >Masculino
+				<input type="radio" name="genero" value="M" data-toggle="radio"/>
+			</label>
+			
+			<label for="com">Comentarios:</label>
+			<textarea name="com" id="com">
+			</textarea></br>
+			
+			<label class="checkbox" for="checkbox1">
+			<input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+				Checkbox1
+			</label>
+			<label class="checkbox" for="checkbox2">
+			<input type="checkbox" value="" id="checkbox2" data-toggle="checkbox">
+				Checkbox2
+			</label>
+			<label class="checkbox" for="checkbox3">
+			<input type="checkbox" value="" id="checkbox3" data-toggle="checkbox">
+				Checkbox3
+			</label>
+			
+			<select name="est">
+				<option value="001"> Mexico </option>
+				<option value="002">Guanajuato</option>
+				<option value="003"> Queretaro</option>
+				<option value="004"> Pachuca</option>
+			</select> 
+		
+			
+	       
 			<input type="submit" value="Enviar" class="btn btn-hg btn-primary"/>
 
 		  </form>
