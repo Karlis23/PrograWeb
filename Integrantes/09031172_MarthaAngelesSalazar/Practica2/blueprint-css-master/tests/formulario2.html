@@ -34,14 +34,14 @@
 			 $("#resultado").hide(); <!-- ocultar-->
 			 $("#resultado").html(html);<!--funcion q permite modificar el codigo html -->
 			 //$("#resultado").show('slow'); <!-- muestro el contenido-->
-			// $("#fechaNac" ).datepicker();
+			 //$("#fechaNac" ).datepicker();
 			 //$("select").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
 			 
 			 $("#btn1").click(function () {
 			   $("#resultado").toggle('slow'); <!-- muestro el contenido-->
-			   //$(this).slideUp(300);
-			   //$(this).delay(600);
-			   //$(this).fadeIn(400);
+			   $(slide).slideUp();
+			   $(delay).delay();
+			   $(fade).fadeIn();
 			 });
 		 });
 		 
@@ -52,63 +52,23 @@
       <body>
 	     
 		 <div class="container">
-			<button id="btn1" class="btn btn-hg btn-primary"> Resultado </button>
+			<div id="btn1" class="btn btn-hg btn-primary"> Resultado </div>
 			<div id="resultado"></div>
 		 
 		  <form action="" method="GET" > <!-- especifica la ruta a dond lo enviara http protolocolo sin memoria las variables no se conservan entonces se tienn q ocupar mecanismo
 															 de recuperacion de datos como get envia x la url y post por el cuerpo dela pagina, get envia atraves de la url-->
 		  
-            <label for="nombre" > Nombre:</label>
-			<input type="text" id="nombre" name="nombre" class="form-control" required autofocus />
+            <label for="slide" > SLIDE:</label>
+			<input type="text" id="slide" name="slide" class="form-control" required autofocus />
 		
 			
-			<label for="apellido" > Apellido Paterno:</label>
-			<input type="text" id="apellido" name="apellido" class="form-control"  required/>
+			<label for="delay" > DELAY:</label>
+			<input type="text" id="delay" name="delay" class="form-control"  required/>
 			
-			<label for="ape" > Apellido Materno:</label>
-			<input type="text" id="ape" name="ape" class="form-control" required/>
+			<label for="fade" > FADE:</label>
+			<input type="text" id="fade" name="fade" class="form-control" required/>
 			
-			<label for="e-mail" > E-mail:</label>
-			<input type="text" id="e-mail" name="e-mail" class="form-control" required/>
-			
-			<label for="fechaNac" > Fecha:</label>
-			<input type="date" id="fechaNac" name="fechaNac" class="form-control" />
-			
-			<label for="genero" > Genero:</label></br>
-			
-			<label class="radio"> Femenino
-				<input type="radio" name="genero" value="F" data-toggle="radio"/>
-			</label>
-			<label class="radio" >Masculino
-				<input type="radio" name="genero" value="M" data-toggle="radio"/>
-			</label>
-			
-			<label for="com">Comentarios:</label>
-			<textarea name="com" id="com">
-			</textarea></br>
-			
-			<label class="checkbox" for="checkbox1">
-			<input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
-				Checkbox1
-			</label>
-			<label class="checkbox" for="checkbox2">
-			<input type="checkbox" value="" id="checkbox2" data-toggle="checkbox">
-				Checkbox2
-			</label>
-			<label class="checkbox" for="checkbox3">
-			<input type="checkbox" value="" id="checkbox3" data-toggle="checkbox">
-				Checkbox3
-			</label>
-			
-			<select name="est">
-				<option value="001"> Mexico </option>
-				<option value="002">Guanajuato</option>
-				<option value="003"> Queretaro</option>
-				<option value="004"> Pachuca</option>
-			</select> 
 		
-			
-	       
 			<input type="submit" value="Enviar" class="btn btn-hg btn-primary"/>
 
 		  </form>
